@@ -1,0 +1,42 @@
+page {
+  height: 100%;
+}
+.case-content {
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+.case-content .case-left {
+  flex: 2;
+}
+.case-content .case-left .case-title {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.case-content .active {
+  color: var(--themeColor);
+  border-left: 5rpx solid var(--themeColor);
+}
+.case-content .case-right {
+  flex: 5;
+}
+.case-content .case-right .case-goods .goods-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80rpx;
+  padding: 0 10rpx;
+}
+.case-content .case-right .case-goods .goods-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.case-content .case-right .case-goods .goods-list .goods-link {
+  width: 33.33%;
+  text-align: center;
+}
+.case-content .case-right .case-goods .goods-list .goods-link image {
+  width: 50%;
+}

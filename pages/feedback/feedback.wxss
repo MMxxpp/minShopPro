@@ -1,0 +1,53 @@
+.feed_content {
+  background-color: #ccc;
+  padding: 15rpx;
+}
+.feed_content .feed_type {
+  display: flex;
+  flex-wrap: wrap;
+}
+.feed_content .feed_type text {
+  width: 25%;
+  padding: 10rpx;
+  text-align: center;
+  background-color: #fff;
+  margin: 20rpx;
+}
+.feed_content .textArea {
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.feed_content .textArea textarea {
+  padding: 10rpx;
+}
+.feed_content .textArea .feedTool {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rpx;
+}
+.feed_content .textArea .feedTool button {
+  margin: 0;
+  width: 90rpx;
+  height: 90rpx;
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-top: 25rpx;
+}
+.feed_content .textArea .feedTool .img_wrap {
+  margin-left: 30rpx;
+  margin-top: 25rpx;
+}
+.feed_content .submit {
+  margin-top: 20rpx;
+}
+.feed_content .submit button {
+  margin-right: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300rpx;
+  height: 100rpx;
+}

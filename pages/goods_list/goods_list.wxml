@@ -1,0 +1,29 @@
+<view>
+    <search></search>
+    <!-- 监听自定义事件 -->
+    <tabs tabs="{{tabs}}" bindtabsTurn="tabsTurn">
+        <block>
+            <view class="tabsItem">
+                <navigator class="tabsNav"
+                wx:for="{{goodsList}}"
+                wx:for-item="item"
+                wx:key="goods_id"
+                url='../goods_detail/goods_detail?goods_id={{item.goods_id}}'
+                >
+                    <view class="tabsImg">
+                        <image src="{{item.goods_small_logo?item.goods_small_logo:'../../icons/loading.gif'}}" mode="widthFix">
+                        </image>
+                    </view>
+                    <view class="tabsTitle">
+                        <view class="goodsInfo">
+                            {{item.goods_name}}
+                        </view>
+                        <view class="goodsPrice">
+                            ￥{{item.goods_price}}
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+        </block>
+    </tabs>
+</view>

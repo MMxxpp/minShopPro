@@ -1,0 +1,29 @@
+.tabsNav {
+  display: flex;
+  border-bottom: 1rpx solid #999;
+}
+.tabsNav .tabsImg {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tabsNav .tabsImg image {
+  width: 70%;
+}
+.tabsNav .tabsTitle {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.tabsNav .tabsTitle .goodsInfo {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+}
+.tabsNav .tabsTitle .goodsPrice {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}

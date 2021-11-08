@@ -1,0 +1,13 @@
+<view class="search_wrap">
+    <input value="{{inputValue}}" type="text" placeholder="请输入您要搜索的商品信息" bindinput='handleSearch'></input>
+    <button bindtap='handleHide' hidden='{{isHide}}'>取消</button>
+</view>
+<view class="search_content">
+<navigator class="searchTip"
+url='../goods_detail/goods_detail?goods_id={{item.goods_id}}'
+wx:for='{{goods}}'
+wx:key='goods_id'>
+{{item.goods_name}}
+</navigator>
+    
+</view>

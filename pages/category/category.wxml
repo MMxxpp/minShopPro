@@ -1,0 +1,43 @@
+<view>
+    <search></search>
+    <view class="case-content">
+        <scroll-view class="case-left" scroll-y>
+           <view class="case-title {{index===currentIndex?'active':''}}"
+           wx:for="{{leftCateList}}"
+           wx:for-index='index'
+           wx:key="*this"
+           bindtap="selectIndex"
+           data-index='{{index}}'>
+
+           {{item}}
+           </view>
+        </scroll-view>
+        <scroll-view class="case-right" scroll-y scroll-top="{{scrollTop}}">
+            <view class="case-goods"
+            wx:for="{{rightCateList}}"
+            wx:for-item="item1"
+            wx:for-index="index1"
+            >
+            <view class="goods-title">
+                /{{item1.cat_name}}/
+            </view>
+            <view class="goods-list">
+                <navigator class="goods-link"
+                wx:for="{{item1.children}}"
+                wx:for-item="item2"
+                wx:key='cat_id'
+                url="../goods_list/goods_list?cid={{item2.cat_id}}"
+                >
+                    <image src="{{item2.cat_icon}}" mode="widthFix">
+                    </image>
+                    <text class="goods-text">
+                        {{item2.cat_name}}
+                        
+                    </text>
+                </navigator>
+            </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+   

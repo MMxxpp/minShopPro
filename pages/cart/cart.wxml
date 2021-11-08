@@ -1,0 +1,85 @@
+<view class="address_view">
+    <view class="addressAdd" wx:if='{{!address.userName}}'>
+        <button bindtap="choseAddress" type="primary" plain>收货地址</button>
+    </view>
+    <view wx:else class="userInfo">
+        <view class="addressInfo">
+            <view>
+                收货人：{{address.userName}}
+            </view>
+            <view>
+                收货地址：{{address.addressAll}}
+            </view>
+        </view>
+        <view class="addressTel">
+            {{address.telNumber}}
+        </view>
+    </view>
+</view>
+<!-- 因为 wx:if 是一个控制属性，需要将它添加到一个标签上。如果要一次性判断多个组件标签，可以使用一个 <block/> 
+标签将多个组件包装起来，并在上边使用 wx:if 控制属性。 -->
+
+<block wx:if='{{cart.length!=0}}'>
+    <view class="cartInfoAll">
+        <view class="cartName">购物车</view>
+        <view class="cart_main"
+        wx:for='{{cart}}'
+        wx:key='goods_id'
+        >
+            <!-- 复选框 -->
+            <view class="checkBoxName">
+                <checkbox-group data-id='{{item.goods_id}}' bindchange="handleChecked">
+                    <checkbox checked='{{item.checked}}'>
+                        
+                    </checkbox>
+                </checkbox-group>
+            </view>
+            <!-- 图片 -->
+            <view class="cartImage">
+                <image src="{{item.goods_small_logo}}" mode="widthFix">
+                    
+                </image>
+            </view>
+            <!-- 商品信息 -->
+            <view class="cartInfo">
+                <view class="cart_name">{{item.goods_name}}</view>
+                <view class="cart_price_wrap">
+                    <view class="cartPrice">￥{{item.goods_price}}</view>
+                    <view class="cartTool">
+                        <view class="edit" data-changeNum='{{-1}}' data-id="{{item.goods_id}}" bindtap='handleItemNUm'>
+                            -
+                        </view>
+                        <view class="toolNum">{{item.num}}</view>
+                        <view class="edit" data-changeNum='{{1}}' data-id="{{item.goods_id}}" bindtap='handleItemNUm'>
+                            +
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>
+<block wx:else>
+    <image src="../../icons/kong.png" mode="widthFix">
+        
+    </image>
+</block>
+<view class="footInfo">
+    <view class="footCheck">
+        <checkbox-group bindchange="handleAllcheck">
+            <checkbox checked='{{allChecked}}'>
+                全选
+            </checkbox>
+        </checkbox-group>
+    </view>
+    <view class="footPrice">
+        <view class="priceAll">
+            合计：<text>￥{{totalPrice}}
+            </text>
+        </view>
+        <view class="priceText">包含运费</view>
+    </view>
+    <view class="total" bindtap="handlePay">
+            合算({{totalNum}})
+    </view>
+</view>

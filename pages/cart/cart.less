@@ -1,0 +1,154 @@
+
+page{
+  padding-bottom: 90rpx;
+}
+.address_view{
+   .addressAdd{
+       padding: 15rpx;
+       button{
+           width: 60%;
+       }
+   }
+   .userInfo{
+    display: flex;
+    font-size: 24rpx;
+    padding: 20rpx;
+    .addressInfo{
+        flex: 6;
+        }   
+    .addressTel{
+        flex: 2;
+        text-align: right;
+    }
+}
+}
+
+.cartInfoAll {
+    .cartName {
+        padding: 20rpx;
+        font-size: 30rpx;
+        color: #000;
+        text-align: center;
+        border-top: 1rpx solid var(--themeColor);
+        border-bottom: 1rpx solid var(--themeColor);
+    }
+  
+    .cart_main {
+        display: flex;
+        border-bottom: 1px solid #ccc;
+      .checkBoxName {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      checkbox-group {
+        checkbox{
+
+        }
+        }
+      }
+  
+      .cartImage {
+          flex: 2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        image {
+            width: 80%;
+        }
+      }
+  
+      .cartInfo {
+          flex: 4;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        .cart_name {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            color: #666;
+        }
+  
+        .cart_price_wrap {
+            display: flex;
+            justify-content: space-between;
+          .cartPrice {
+              color: var(--themeColor);
+              font-size: 34rpx;
+          }
+  
+          .cartTool {
+              display: flex;
+              padding: 0 15rpx;
+            .edit {
+                width: 55rpx;
+                height: 55rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border:1rpx solid #666;
+            }
+  
+            .toolNum {
+                width: 55rpx;
+                height: 55rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footInfo {
+      display: flex;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 90rpx;
+      background-color: #fff;
+      border-top: 1px solid #000;
+    .footCheck {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      checkbox-group {
+  
+      }
+    }
+  
+    .footPrice {
+        flex: 4;
+        padding: 5rpx 15rpx;
+        text-align: right;
+        
+      .priceAll {
+        
+        text {
+            color: var(--themeColor);
+            font-size: 34rpx;
+            font-weight: 600;
+        }
+      }
+  
+      .priceText {
+  
+      }
+    }
+  
+    .total {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--themeColor);
+        color: #fff;
+    }
+  }
+

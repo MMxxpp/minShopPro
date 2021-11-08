@@ -1,0 +1,3 @@
+<view>
+    <button type='primary' plain bindtap="getUserInfo">登录</button>
+</view>

@@ -1,0 +1,16 @@
+.search_bar{
+    width: 100%;
+     height: 90rpx;  /*相当于页面375px中的45px */
+    background-color:#33a3dc;
+    padding: 15rpx;
+}
+
+.search_bar>.sear_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: aliceblue;
+    border-radius: 10rpx;
+    color: #999;
+}
